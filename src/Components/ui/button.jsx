@@ -1,5 +1,7 @@
 import * as React from "react"
 import { cn } from "../../lib/utils"
+import { Slot } from "@radix-ui/react-slot";
+
 
 const Button = React.forwardRef(({ 
   className, 
@@ -8,7 +10,7 @@ const Button = React.forwardRef(({
   asChild = false,
   ...props 
 }, ref) => {
-  const Comp = asChild ? React.Slot : "button"
+  const Comp = asChild ? Slot : "button";
   
   return (
     <Comp
